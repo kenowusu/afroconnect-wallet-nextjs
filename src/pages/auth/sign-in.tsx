@@ -43,7 +43,7 @@ import { HSeparator } from 'components/separator/Separator';
 import DefaultAuthLayout from 'layouts/auth/Default';
 // Assets
 import Link from 'next/link';
-import { FcGoogle } from 'react-icons/fc';
+// import { FcGoogle } from 'react-icons/fc';
 import { MdOutlineRemoveRedEye } from 'react-icons/md';
 import { RiEyeCloseLine } from 'react-icons/ri';
 
@@ -61,7 +61,7 @@ export default function SignIn() {
 	const [ show, setShow ] = React.useState(false);
 	const handleClick = () => setShow(!show);
 	return (
-		<DefaultAuthLayout illustrationBackground={'/img/auth/auth.png'}>
+		<DefaultAuthLayout>
 			<Flex
 				maxW={{ base: '100%', md: 'max-content' }}
 				w='100%'
@@ -92,7 +92,7 @@ export default function SignIn() {
 					mx={{ base: 'auto', lg: 'unset' }}
 					me='auto'
 					mb={{ base: '20px', md: 'auto' }}>
-					<Button
+					{/* <Button
 						fontSize='sm'
 						me='0px'
 						mb='26px'
@@ -107,14 +107,14 @@ export default function SignIn() {
 						_focus={googleActive}>
 						<Icon as={FcGoogle} w='20px' h='20px' me='10px' />
 						Sign in with Google
-					</Button>
-					<Flex align='center' mb='25px'>
+					</Button> */}
+					{/* <Flex align='center' mb='25px'>
 						<HSeparator />
 						<Text color='gray.400' mx='14px'>
 							or
 						</Text>
 						<HSeparator />
-					</Flex>
+					</Flex> */}
 					<FormControl>
 						<FormLabel display='flex' ms='4px' fontSize='sm' fontWeight='500' color={textColor} mb='8px'>
 							Email<Text color={brandStars}>*</Text>
@@ -176,7 +176,7 @@ export default function SignIn() {
 							Sign In
 						</Button>
 					</FormControl>
-					<Flex flexDirection='column' justifyContent='center' alignItems='start' maxW='100%' mt='0px'>
+					{/* <Flex flexDirection='column' justifyContent='center' alignItems='start' maxW='100%' mt='0px'>
 						<Text color={textColorDetails} fontWeight='400' fontSize='14px'>
 							Not registered yet?
 							<Link href='/auth/sign-up'>
@@ -187,7 +187,7 @@ export default function SignIn() {
 								</a>
 							</Link>
 						</Text>
-					</Flex>
+					</Flex> */}
 				</Flex>
 			</Flex>
 		</DefaultAuthLayout>

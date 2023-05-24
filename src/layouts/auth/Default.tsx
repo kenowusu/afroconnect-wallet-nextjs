@@ -28,7 +28,7 @@ function AuthIllustration(props: { children: ReactNode; illustrationBackground: 
 				ps={{ xl: '70px' }}
 				justifyContent='start'
 				direction='column'>
-				<Link href='/admin'>
+				{/* <Link href='/admin'>
 					<a
 						style={{
 							width: 'fit-content',
@@ -45,7 +45,7 @@ function AuthIllustration(props: { children: ReactNode; illustrationBackground: 
 							</Text>
 						</Flex>
 					</a>
-				</Link>
+				</Link> */}
 				{children}
 				<Box
 					display={{ base: 'none', md: 'block' }}
