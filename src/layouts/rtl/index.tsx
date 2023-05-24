@@ -64,7 +64,7 @@ export default function RTLLayout(props: RTLLayoutProps) {
 							{children}
 						</Box>
 						<Box>
-							<Footer />
+							{/* <Footer /> */}
 						</Box>
 					</Box>
 				</SidebarContext.Provider>
