@@ -1,3 +1,7 @@
+import axios from 'axios'
+const apiUrl = process.env.NEXT_PUBLIC_API_URL
+
+
 import {
   Flex,
   Table,
@@ -12,7 +16,7 @@ import {
   Tfoot,
   useColorModeValue
 } from '@chakra-ui/react'
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import {
   ColumnInstance,
   HeaderGroup,
@@ -34,7 +38,24 @@ import { TableProps } from '../variables/columnsData'
 export default function CheckTable () {
 
 
+useEffect( async()=>{
+  
+  try {
+    const users =  await axios({
+      url:`${apiUrl}/transact/credit`,
+      method:'post',
+      data:{
+        email:'johndoe3@gmail.com',
+        creditAmount:'40.00'
+      }
+    })
 
+    console.log(users)
+  } catch (error) {
+    console.log(error)
+  }
+ 
+},[])
 
   return (
     <Card
